@@ -136,6 +136,9 @@ body {
 }
 
 @media (min-width: 800px) {
+  body {
+    background-image: url(../images/bg-pattern-desktop.svg);
+  }
   .page__hero {
     display: none;
   }
@@ -170,5 +173,8 @@ body {
   .container .page__text h2 {
     font-size: 4rem;
     letter-spacing: 15px;
+  }
+  .container .page__text__form button {
+    width: 5rem;
   }
 }/*# sourceMappingURL=styles.css.map */

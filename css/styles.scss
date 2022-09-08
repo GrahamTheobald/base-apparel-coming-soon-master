@@ -126,13 +126,14 @@ body {
 }
 
 @media (min-width: 800px) {
+    body {
+        background-image: url(../images/bg-pattern-desktop.svg);
+    }
     .page {
         &__hero {
             display: none;
         }
     }
-
-    
     .container {
         display: flex;
         flex-direction: row;
@@ -151,13 +152,11 @@ body {
                 max-width: revert;
             }
         }
-
         header {
             img {
                 width: 10rem;
             }
         }
-
         .page__text {
             margin-top: 5rem;
             padding-right: 6rem;
@@ -166,7 +165,11 @@ body {
                 font-size: 4rem;
                 letter-spacing: 15px;
             }
-
+            &__form {
+                button {
+                    width: 5rem;
+                }
+            }
         }
     }
 }

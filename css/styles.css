@@ -147,6 +147,7 @@ body {
   .container .desktop-left {
     flex: 1;
     padding: 2rem 6rem;
+    width: 50%;
   }
   .container .desktop-hero {
     display: revert;

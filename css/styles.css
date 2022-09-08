@@ -55,6 +55,24 @@ body {
   border-radius: 2rem;
   overflow: hidden;
 }
+.container .page__text__form input[type=text]::-moz-placeholder {
+  border-radius: inherit;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  padding: 1rem;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+.container .page__text__form input[type=text]:-ms-input-placeholder {
+  border-radius: inherit;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  padding: 1rem;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
 .container .page__text__form input[type=text], .container .page__text__form input[type=text]::placeholder {
   border-radius: inherit;
   border: 1px solid hsl(0deg, 36%, 70%);
@@ -64,10 +82,27 @@ body {
   font-size: inherit;
   color: inherit;
 }
+.container .page__text__form input[type=text]::-moz-placeholder {
+  padding: none;
+  border: none;
+  opacity: 0.5;
+}
+.container .page__text__form input[type=text]:-ms-input-placeholder {
+  padding: none;
+  border: none;
+  opacity: 0.5;
+}
 .container .page__text__form input[type=text]::placeholder {
   padding: none;
   border: none;
   opacity: 0.5;
+}
+.container .page__text__form input[type=text]:focus-visible {
+  outline: none;
+  border: 2px solid hsl(0deg, 36%, 70%);
+}
+.container .page__text__form input[type=text]:focus-visible.invalid, .container .page__text__form input[type=text].invalid {
+  border: 2px solid hsl(0deg, 93%, 68%);
 }
 .container .page__text__form button {
   outline: none;
@@ -78,6 +113,61 @@ body {
   width: 4rem;
   height: 100%;
   background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  cursor: pointer;
+}
+.container .page__text__form .error-icon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 5rem;
+}
+.container .page__text .error-message {
+  margin: -1.5rem 2rem;
+  font-size: 13px;
+  color: hsl(0deg, 93%, 68%);
 }
 
-/*# sourceMappingURL=styles.css.map */
+.hidden {
+  display: none;
+}
+
+.desktop-hero {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .page__hero {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .container .desktop-left {
+    flex: 1;
+    padding: 2rem 6rem;
+  }
+  .container .desktop-hero {
+    display: revert;
+    flex: 1;
+  }
+  .container .desktop-hero img {
+    float: right;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: revert;
+  }
+  .container header img {
+    width: 10rem;
+  }
+  .container .page__text {
+    margin-top: 5rem;
+    padding-right: 6rem;
+    text-align: left;
+  }
+  .container .page__text h2 {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+}/*# sourceMappingURL=styles.css.map */

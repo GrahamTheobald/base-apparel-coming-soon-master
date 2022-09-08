@@ -80,6 +80,14 @@ body {
                     border: none;
                     opacity: 0.5;
                 }
+                input[type="text"]:focus-visible {
+                    outline: none;
+                    border: 2px solid $DesaturatedRed;
+                }
+                input[type="text"]:focus-visible.invalid, input[type="text"].invalid{
+                    border: 2px solid $SoftRed;
+                }
+
                 button {
                     outline: none;
                     border: none;
@@ -88,11 +96,76 @@ body {
                     right: 0;
                     width: 4rem;
                     height: 100%;
-                    background: $Linear2
+                    background: $Linear2;
+                    cursor: pointer;
+                }
+                .error-icon {
+                    position: absolute;
+                    top: 50%;
+                    translate: 0 -50%;
+                    right: 5rem;
                 }
                 
+            }
+            .error-message {
+                margin: -1.5rem 2rem;
+                font-size: 13px;
+                color: $SoftRed;
             }
         }
     }
 
+}
+
+.hidden {
+    display: none
+}
+
+.desktop-hero {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .page {
+        &__hero {
+            display: none;
+        }
+    }
+
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        .desktop-left {
+            flex: 1;
+            padding: 2rem 6rem;
+        }
+        .desktop-hero {
+            display: revert;
+            flex: 1;
+            img {
+                float: right;
+                object-fit: cover;
+                max-width: revert;
+            }
+        }
+
+        header {
+            img {
+                width: 10rem;
+            }
+        }
+
+        .page__text {
+            margin-top: 5rem;
+            padding-right: 6rem;
+            text-align: left;
+            h2 {
+                font-size: 4rem;
+                letter-spacing: 15px;
+            }
+
+        }
+    }
 }

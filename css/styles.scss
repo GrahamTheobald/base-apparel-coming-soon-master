@@ -1,0 +1,98 @@
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+$DarkGrayishRed: hsl(0, 6%, 24%);
+$Linear1: linear-gradient(135deg, hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+$Linear2: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    // border: 1px solid red !important;
+    // background-color: hsla(100, 100%, 50%, 0.1) !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 375px;
+    color: $DesaturatedRed;
+    header {
+        padding: 2rem;
+        img {
+            width: 7rem
+        }
+        h1 {
+            display: none;
+        }
+    }
+
+    .page {
+        &__text {
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            h2 {
+                font-size: 3rem;
+                line-height: 1;
+                text-transform: uppercase;
+                letter-spacing: 10px;
+                font-weight: 300;
+                span {
+                    color: black;
+                    font-weight: 400;
+                }
+            }
+
+            p {
+                line-height: 1.5;
+            }
+
+            &__form {
+                position: relative;
+                border-radius: 2rem;
+                overflow: hidden;
+                input[type="text"], input[type="text"]::placeholder {
+                    border-radius: inherit;
+                    border: 1px solid $DesaturatedRed;
+                    padding: 1rem;
+                    width: 100%;
+                    font-family: inherit;
+                    font-size: inherit;
+                    color: inherit;
+                }
+                input[type="text"]::placeholder {
+                    padding: none;
+                    border: none;
+                    opacity: 0.5;
+                }
+                button {
+                    outline: none;
+                    border: none;
+                    position: absolute;
+                    border-radius: inherit;
+                    right: 0;
+                    width: 4rem;
+                    height: 100%;
+                    background: $Linear2
+                }
+                
+            }
+        }
+    }
+
+}

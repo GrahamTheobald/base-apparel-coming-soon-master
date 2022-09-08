@@ -1,0 +1,83 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 375px;
+  color: hsl(0deg, 36%, 70%);
+}
+.container header {
+  padding: 2rem;
+}
+.container header img {
+  width: 7rem;
+}
+.container header h1 {
+  display: none;
+}
+.container .page__text {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .page__text h2 {
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 300;
+}
+.container .page__text h2 span {
+  color: black;
+  font-weight: 400;
+}
+.container .page__text p {
+  line-height: 1.5;
+}
+.container .page__text__form {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.container .page__text__form input[type=text], .container .page__text__form input[type=text]::placeholder {
+  border-radius: inherit;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  padding: 1rem;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+.container .page__text__form input[type=text]::placeholder {
+  padding: none;
+  border: none;
+  opacity: 0.5;
+}
+.container .page__text__form button {
+  outline: none;
+  border: none;
+  position: absolute;
+  border-radius: inherit;
+  right: 0;
+  width: 4rem;
+  height: 100%;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+}
+
+/*# sourceMappingURL=styles.css.map */

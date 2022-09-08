@@ -15,7 +15,6 @@ form.addEventListener("submit", e => {
 })
 
 input.addEventListener('input', e => {
-    console.log('change')
     hide_errors()
 })
 
